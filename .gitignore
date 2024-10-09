@@ -41,3 +41,32 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+# Flutter specific
+build/
+ios/Flutter/.generated
+.android/
+.vscode/
+
+# macOS specific
+macos/Flutter/ephemeral/
+*.DS_Store
+
+# Web specific
+web/.sass-cache/
+web/.flutter-plugins
+web/.dart_tool/
+build/web/
+web/canvaskit/
+
+# Windows specific
+windows/flutter/ephemeral/
+
+# Linux specific
+linux/flutter/ephemeral/
+
+# Google Fonts cache
+.google_fonts/
+
+# Flutter generated files
+*.flutter-plugins-dependencies
+packages.bzl
