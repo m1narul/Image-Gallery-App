@@ -11,3 +11,29 @@ GeneratedPluginRegistrant.java
 key.properties
 **/*.keystore
 **/*.jks
+# Android specific build outputs
+android/.gradle/
+android/app/build/
+android/app/intermediates/
+android/app/outputs/
+android/app/src/main/res/drawable*/**/*.png
+android/app/src/main/res/drawable*/**/*.xml
+android/.idea/
+android/captures/
+android/gradle-wrapper.jar
+android/gradle-wrapper.properties
+android/local.properties
+android/*.iml
+android/build/
+*.hprof
+
+# IntelliJ specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+
+# Gradle files
+.gradle/
+build/

@@ -1,1 +1,17 @@
 flutter/ephemeral
+# Linux specific build outputs
+flutter/ephemeral/
+flutter/GeneratedPluginRegistrant.cc
+flutter/GeneratedPluginRegistrant.h
+flutter/CMakeFiles/
+flutter/cmake_install.cmake
+flutter/Makefile
+flutter/build/
+
+# Exclude Linux build artifacts and temporary files
+runner/CMakeFiles/
+runner/Makefile
+runner/flutter_generated_plugin_registrant.cc
+runner/flutter_generated_plugin_registrant.h
+runner/cmake_install.cmake
+runner/build/

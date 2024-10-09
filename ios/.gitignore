@@ -32,3 +32,23 @@ Runner/GeneratedPluginRegistrant.*
 !default.mode2v3
 !default.pbxuser
 !default.perspectivev3
+# iOS specific build outputs
+ios/Flutter/ephemeral/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Pods/
+ios/Runner.xcworkspace/
+ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-*.png
+ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json
+ios/Runner/Assets.xcassets/Contents.json
+ios/Runner/GeneratedPluginRegistrant.h
+ios/Runner/GeneratedPluginRegistrant.m
+ios/.DS_Store
+
+# Xcode specific files
+*.xcuserstate
+*.xcworkspace
+*.xcodeproj/
+xcuserdata/
+*.hmap
+*.lock
