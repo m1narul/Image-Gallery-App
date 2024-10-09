@@ -5,3 +5,17 @@
 # Xcode-related
 **/dgph
 **/xcuserdata/
+# macOS specific build outputs
+macos/Flutter/ephemeral/
+macos/Flutter/GeneratedPluginRegistrant.swift
+macos/Flutter/Generated.xcconfig
+macos/Pods/
+macos/Runner.xcworkspace/
+macos/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-*.png
+macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json
+macos/Runner/Assets.xcassets/AppIcon.appiconset/*.png
+macos/Runner/Assets.xcassets/Contents.json
+
+# macOS specific temporary files
+macos/Flutter/Flutter.podspec
+macos/.DS_Store
