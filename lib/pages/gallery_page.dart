@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import '../services/pixabay_service.dart';
 
@@ -10,7 +11,7 @@ class GalleryPage extends StatefulWidget {
 class _GalleryPageState extends State<GalleryPage> {
   static const _pageSize = 20;
   final PagingController<int, dynamic> _pagingController = PagingController(firstPageKey: 1);
-  final PixabayService pixabayService = PixabayService();
+  final PiXaBayService piXaBayService = PiXaBayService();
 
   @override
   void initState() {
@@ -21,8 +22,9 @@ class _GalleryPageState extends State<GalleryPage> {
   }
 
   Future<void> _fetchPage(int pageKey) async {
+
     try {
-      final newItems = await pixabayService.fetchImages(pageKey);
+      final newItems = await piXaBayService.fetchImages(pageKey);
       final isLastPage = newItems.length < _pageSize;
       if (isLastPage) {
         _pagingController.appendLastPage(newItems);
@@ -31,6 +33,8 @@ class _GalleryPageState extends State<GalleryPage> {
         _pagingController.appendPage(newItems, nextPageKey);
       }
     } catch (error) {
+      Get.log("Run _fetchPage $error");
+
       _pagingController.error = error;
     }
   }

@@ -48,3 +48,9 @@ Add screenshots of the app running on various devices here.
 
 License
 This project is licensed under the MIT License. See the LICENSE file for details.# Image-Gallery-App
+
+## Basic Config
+- [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons)
+- Setting: flutter pub run flutter_launcher_icons -f config/flutter_launcher_icons-production.yaml
+- [flutter_native_splash](https://pub.dev/packages/flutter_native_splash)
+- Setting: dart run flutter_native_splash:create --path=config/flutter_native_splash.yaml
