@@ -1,0 +1,9 @@
+{
+  "base_url_dev": "",
+  "base_url_prod": "https://pixabay.com/api/",
+  "base_url_local": "",
+  "ios_app": "",
+  "android_app": "",
+  "api_path": "api/v1/",
+  "PiXaBayApiKey": "46418419-e77d637072bf55f51881a6ac8"
+}
