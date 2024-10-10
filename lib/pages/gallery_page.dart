@@ -1,5 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_gallery/pages/DetailsPage.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import '../services/pixabay_service.dart';
 
@@ -57,27 +59,32 @@ class _GalleryPageState extends State<GalleryPage> {
   }
 
   Widget _buildImageItem(dynamic item) {
-    return Card(
-      child: Column(
-        children: [
-          Expanded(
-            child: Image.network(
-              item['webformatURL'],
-              fit: BoxFit.cover,
-              width: double.infinity,
+    return InkWell(
+      onTap: (){
+        Get.to(DetailsPage(item: item['webformatURL'],));
+      },
+      child: Card(
+        child: Column(
+          children: [
+            Expanded(
+              child: CachedNetworkImage(
+                imageUrl: item['webformatURL'],
+                fit: BoxFit.cover,
+                width: double.infinity,
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Expanded(child: Text('Likes: ${item['likes']}',overflow: TextOverflow.ellipsis,)),
-                SizedBox(width: 20,),
-                Expanded(child: Text('Views: ${item['views']}',overflow: TextOverflow.ellipsis,)),
-              ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Expanded(child: Text('Likes: ${item['likes']}',overflow: TextOverflow.ellipsis,)),
+                  SizedBox(width: 20,),
+                  Expanded(child: Text('Views: ${item['views']}',overflow: TextOverflow.ellipsis,)),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
